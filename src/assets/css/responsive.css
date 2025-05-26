@@ -1,0 +1,605 @@
+@media only screen and (max-width: 1200px) {
+    .lol-container {
+      margin: 0 100px auto !important;
+    }
+  
+    .naveen-about-1 {
+      margin: 0 50px auto !important;
+    }
+   
+  }
+  
+  @media only screen and (max-width: 1120px) {
+    .lol-container{
+      margin: 0 75px auto !important;
+    }
+    .project-card-1 {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  
+    .project-1 img {
+      width: 100% !important;
+    }
+  
+    .naveen-skills {
+      padding-bottom: 90px;
+    }
+  
+    .naveen-introduce {
+      padding-bottom: 100px;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .lol-container {
+      margin: 0 50px auto !important;
+    }
+  
+    /* .footer-naveen {
+        margin-top: 108px !important;
+      } */
+  
+    .naveen-introduce h2 {
+      font-size: 52px !important;
+    }
+  
+    .naveen-introduce h3 {
+      font-size: 54px !important;
+    }
+  
+    /* project */
+    .project-card-1 {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  
+  }
+  @media only screen and (max-width: 968px) {
+    .naveen-contact {
+      display: grid !important;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 48px;
+  }
+  .naveen-contactbroder{
+    margin: 0 100px auto;
+  }
+  .naveen-contact-1{
+    margin-bottom: 0 !important;
+  }
+  .naveen-contact-2 {
+    padding: 0 0 35px 0 !important;
+  }
+  }
+  @media only screen and (max-width: 832px) {
+    .naveen-contactbroder{
+      margin: 0 70px auto !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .lol-container {
+      margin: 0 40px auto !important;
+    }
+  
+    .naveen-social {
+      display: none !important;
+    }
+  
+    .naveen-introduce h2 {
+      font-size: 50px !important;
+    }
+  
+    .naveen-introduce h3 {
+      font-size: 50px !important;
+    }
+  
+    .naveen-introduce h5 {
+      font-size: 18px !important;
+      margin: 0 0 24px 0 !important;
+    }
+  
+    /* .footer-naveen {
+        margin-top: 115px !important;
+      } */
+  
+    /* about */
+    .naveen-about-1 {
+      margin: 0 auto !important;
+    }
+  
+    .naveen-about h2 {
+      font-size: 28px !important;
+    }
+  
+    .naveen-about h3 {
+      font-size: 16px !important;
+    }
+  
+    .naveen-qualification-1 h2 {
+      font-size: 28px !important;
+    }
+  
+    .naveen-qualification-1 h4 {
+      font-size: 16px !important;
+    }
+  
+    /* skills */
+    .naveen-skills {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  
+    .skills h3 {
+      font-size: 32px !important;
+    }
+  
+    .skills h4 {
+      font-size: 16px !important;
+    }
+  
+    /* project */
+    .project-card-1 {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  
+    .project-1 img {
+      width: 100% !important;
+      height: 220px !important;
+    }
+  
+    .project-card-sub h2 {
+      font-size: 38px !important;
+    }
+  
+    .project-card-sub h3 {
+      font-size: 16px !important;
+    }
+  
+    /* contact */
+    .naveen-form-main {
+      display: grid !important;
+    }
+  
+    /* .naveen-contact-1{
+      margin-bottom: 150px ;
+    } */
+    .contact-naveen h2 {
+      font-size: 36px !important;
+    }
+  
+    .contact-naveen h3 {
+      font-size: 16px !important;
+    }
+  }
+  @media only screen and (max-width: 680px) {
+    .naveen-contactbroder{
+      margin: 0 35px auto !important;
+    }
+  }
+  
+  @media only screen and (max-width: 604px) {
+    .lol-container {
+      margin: 0 15px auto !important;
+      margin-bottom: 0 !important;
+    }
+    .contact-background {
+      background: linear-gradient(#fff, #fff 50%, #dbffff 60%, #57c9e0 90%);
+      height:200vh !important;
+  }
+    .naveen-adjust-resume {
+      height: 52% !important;
+    }
+    .naveen-resume-download {
+      top: 378px !important;
+    }
+    .naveen-contact-1::after{
+      display: none;
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .nav-bar img {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .nav-bar-two a {
+      font-size: 10px;
+      margin-left: 0;
+    }
+  
+    .nav-bar-menu {
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav-links.show {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .menu-button {
+      display: block;
+      display: unset !important;
+      background-color: transparent;
+      border: transparent;
+      position: relative;
+    }
+  
+    /* ___________ */
+    .nav-bar-one {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* .nav-bar img {
+        margin-bottom: 10px;
+      } */
+  
+    .nav-bar-two {
+      display: flex;
+      /* flex-direction: column; */
+      position: absolute;
+      /* border-radius: 10px; */
+      text-align: center;
+      border: transparent;
+      padding: 22px 22px 22px 22px;
+      right: -13px;
+      top: 74px;
+      background-color: #fbfdfe;
+      width: 106% !important;
+      /* width: 363px !important; */
+      box-shadow: -5px 12px 16px 0px rgba(0, 0, 0, 0.2);
+      height: auto;
+      transition: width 0.1s ease-in-out !important;
+      overflow: hidden;
+    }
+  
+    .nav-bar-two a {
+      font-size: 15px;
+      margin-left: 40px !important;
+      margin: 10px 20px;
+      display: ('${showMenu ? ' block' : ' none'}');
+    }
+  
+    .menu-button {
+      display: block;
+      background-color: transparent;
+      border: transparent;
+      position: relative;
+    }
+  
+    .nav-bar-two.active {
+      width: 200px;
+    }
+  
+    .nav-bar-two {
+      width: 0;
+      transition: width 0.1s ease-in-out;
+      /* overflow: hidden; */
+    }
+  
+    /* resume */
+    .naveen-adjust-resume {
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      position: absolute;
+      inset: 53px 0px;
+      border: 1px solid rgb(204, 204, 204);
+      background: rgb(255, 255, 255);
+      overflow: auto;
+      border-radius: 4px;
+      outline: none;
+      padding: 20px;
+    }
+  
+    .naveentextlayer {
+      width: 345px !important;
+      height: 375px !important;
+    }
+  
+    .naveen-resume-newadjust {
+      display: flex !important;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    /* resume */
+    .nav-bar-two:not(.active) {
+      display: none;
+    }
+  
+    /* ________________ */
+  
+    .naveen-social {
+      display: none !important;
+    }
+  
+    .naveen-introduce {
+      text-align: center;
+      padding-bottom: 0;
+      /* margin-bottom: 40px; */
+    }
+  
+    .naveen-introduce h2 {
+      font-family: poppins !important;
+      font-size: 38px !important;
+      font-weight: 700 !important;
+    }
+  
+    .naveen-introduce h3 {
+      font-size: 45px !important;
+      font-weight: 700 !important;
+    }
+  
+    .naveen-introduce h5 {
+      font-size: 18px !important;
+    }
+  
+    .naveen-introduce a {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .naveen-introduce button {
+      width: 50%;
+      justify-content: center;
+      /* margin: 0 107px auto; */
+      margin-bottom: 65px;
+    }
+  
+    /* about */
+    .naveen-about-1 {
+      display: grid !important;
+      margin: 0 50px auto !important;
+      text-align: center;
+    }
+  
+    .naveen-about-1 img {
+      width: 200px !important;
+      height: 207px !important;
+    }
+  
+    .naveen-about h3 {
+      margin: 0 0 44px 0 !important;
+    }
+  
+    .naveen-about-1 h4 {
+      text-align: center !important;
+      font-size: 16px !important;
+      margin: 0 0 35px 0 !important;
+    }
+  
+    .naveen-resume {
+      justify-content: center;
+    }
+  
+    .naveen-about-sub {
+      justify-content: center !important;
+      text-align: center;
+    }
+  
+    .naveen-resume-button {
+      width: 100%;
+  
+    }
+  
+    .naveen-qualification {
+      padding: 54px 0 !important;
+      margin-bottom: 100px;
+    }
+  
+    /* .footer-naveen {
+        margin-top: 85px !important;
+      } */
+  
+    /* skills */
+    .naveen-skills {
+      grid-template-columns: repeat(1, 1fr) !important;
+      margin-bottom: 135px !important;
+      padding: 0;
+    }
+  
+    /* project */
+    .project-card-1 {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  
+    .project-1 {
+      border-radius: 10px;
+    }
+  
+    .project-1 img {
+      border-radius: 10px 10px 0 0;
+      width: 100% !important;
+      height: 200px !important;
+    }
+  
+    /* contact */
+    .naveen-contact {
+      display: grid !important;
+      margin-bottom: 75px;
+    }
+  
+    .naveen-form-main {
+      display: grid !important;
+    }
+  
+    .contact-naveen h2 {
+      font-size: 32px !important;
+    }
+  
+    .naveen-contact-1 {
+  
+      margin-bottom: 0 !important;
+    }
+  
+    #scroll-up {
+      position: fixed;
+      z-index: 1000000000;
+      bottom: 20px;
+      right: 20px;
+      background-color: #57c9e0;
+      color: #fbfdfe;
+      border: none;
+      border-radius: 10%;
+      padding: 5px;
+      cursor: pointer;
+      display: none;
+      /* initially hidden */
+      transition: background-color 0.3s ease, display 0.3s ease;
+      /* added display transition */
+    }
+  
+    #scroll-up.show-scroll {
+      display: block;
+    }
+  
+    #scroll-up {
+      right: 10px;
+      bottom: 15px;
+    }
+  /* 
+  .naveen-page-pdf.textLayer{
+    overflow: hidden !important;
+    
+    width: 0 !important;
+    height: 0 !important;
+  } */
+  .react-pdf__Page__textContent {
+    width: 100% !important; /* Set width to 100% for smaller screens */
+    height: auto !important; /* Allow height to adjust automatically based on content */
+  }
+    .naveen-page-pdf canvas{
+      display: block !important;
+      user-select: none ;
+      width: 322px !important;
+      height: 375px !important;
+  
+    }
+    .naveen-contact-2{
+      padding: 0 0 65px 0;
+      justify-content: center;
+    }
+    .naveen-contact {
+      padding: 15px;
+    }
+  }
+  @media only screen and (max-width: 545px) {
+    .nav-bar-two {
+      display: flex;
+      /* flex-direction: column; */
+      position: absolute;
+      /* border-radius: 10px; */
+      text-align: center;
+      border: transparent;
+      padding: 22px 22px 22px 22px;
+      right: -13px;
+      top: 74px;
+      background-color: #fbfdfe;
+      width: 102% !important;
+      /* width: 363px !important; */
+      box-shadow: -5px 12px 16px 0px rgba(0, 0, 0, 0.2);
+      height: auto;
+      transition: width 0.1s ease-in-out !important;
+      overflow: hidden;
+    }
+  }
+
+  
+  @media only screen and (max-width: 505px) {
+    .nav-bar-two {
+      display: flex;
+      /* flex-direction: column; */
+      position: absolute;
+      /* border-radius: 10px; */
+      text-align: center;
+      border: transparent;
+      padding: 22px 22px 22px 22px;
+      right: -13px;
+      top: 74px;
+      background-color: #fbfdfe;
+      width: 100% !important;
+      /* width: 363px !important; */
+      box-shadow: -5px 12px 16px 0px rgba(0, 0, 0, 0.2);
+      height: auto;
+      transition: width 0.1s ease-in-out !important;
+      overflow: hidden;
+    }
+  
+    .nav-bar-two a {
+      font-size: 15px;
+      margin-left: 25px !important;
+      margin: 10px 20px;
+      display: ('${showMenu ? ' block' : ' none'}');
+    }
+  
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .naveen-download-form {
+      display: grid !important;
+    }
+    .naveen-about-1 {
+      display: grid !important;
+      margin: 0 38px auto !important;
+      text-align: center;
+  }
+    .naveen-allform button {
+      width: 62%;
+      white-space: nowrap;
+    }
+  
+    .nav-bar-two {
+      display: flex;
+      /* flex-direction: column; */
+      position: absolute;
+      /* border-radius: 10px; */
+      text-align: center;
+      border: transparent;
+      padding: 22px 22px 22px 22px;
+      right: -13px;
+      top: 74px;
+      background-color: #fbfdfe;
+      width: 100% !important;
+      /* width: 363px !important; */
+      box-shadow: -5px 12px 16px 0px rgba(0, 0, 0, 0.2);
+      height: auto;
+      transition: width 0.1s ease-in-out !important;
+      overflow: hidden;
+    }
+  
+    .nav-bar-two a {
+      font-size: 15px;
+      margin-left: 19px !important;
+      margin: 10px 20px;
+      display: ('${showMenu ? ' block' : ' none'}');
+    }
+  }
+  @media only screen and (max-width: 440px) {
+    .nav-bar-two a {
+      font-size: 15px;
+      margin-left: 14px !important;
+      margin: 10px 20px;
+      display: ('${showMenu ? ' block' : ' none'}');
+  }
+  }
+  @media only screen and (max-width: 410px) {
+  .naveen-about-1 {
+    display: grid !important;
+    margin: 0 26px auto !important;
+    text-align: center;
+  }
+  .nav-bar-two a {
+    font-size: 15px;
+    margin-left: 8px !important;
+    margin: 10px 20px;
+    display: ('${showMenu ? ' block' : ' none'}');
+  }
+  .naveen-contactbroder {
+    margin: 0 20px auto !important;
+  }
+  }

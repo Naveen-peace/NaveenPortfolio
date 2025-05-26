@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../css/responsive.css');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #fbfdfe;
+}
+
+#root {
+    height: 100%;
+}
+
+.total-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    height: 100%;
+
+}
+
+
+
+.lol-container {
+    margin: 0 200px auto;
+
+}
+
+/* navbar */
+.menu-button {
+    display: none;
+}
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+
+}
+.nav-responsive{
+    display: grid;
+    box-sizing: border-box;
+    padding: 60px 180px 0 40px;
+    gap: 20px;
+}
+.nav-responsive a{ 
+   text-decoration: none;
+    font-family: Roboto;
+    color: #171716bc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+.drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(#ffffff 0%, #ffffff 50%, #dbffff 60%, #57c9e0 90%);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.drawer-overlay.open .drawer-content {
+    transform: translateX(0);
+}
+
+.drawer-close {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.nav-background {
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.nav-bar {
+    position: relative;
+}
+
+.nav-bar-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+
+.nav-bar-two {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-bar-two a {
+    text-decoration: none;
+    font-family: Roboto;
+    color: #171716bc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+
+.nav-bar-tow-hover:hover {
+    color: #57c9e0;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.8px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1.08);
+    transform-origin: bottom left;
+}
+
+/* _______________ */
+
+/* __________scroolup */
+/* Add this CSS to your existing styles or create a new CSS file */
+
+.scroll-to-top-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #57c9e0;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-up {
+    display: none;
+}
+
+.scroll-to-top-button:hover {
+    background-color: #0087ca;
+}
+
+/* __________________scroolup */
+
+.nav-bar-tow-hover.active {
+    color: #57c9e0;
+}
+
+.hover-underline-animation.active:after {
+    transform: scaleX(1.08);
+    transform-origin: bottom left;
+    background-color: #57c9e0;
+}
+
+/* ________________ */
+/* navbar */
+/* home */
+.home-head {
+
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 150px;
+}
+
+.naveen-social {
+    display: grid;
+    gap: 15px;
+}
+
+.naveen-social a {
+    text-decoration: none;
+    color: #57c9e0;
+}
+
+/* .naveen-introduce{
+    margin-bottom: 112px;
+} */
+.naveen-introduce h2 {
+    font-family: Playfair;
+    color: #0e0e0bda;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 6500;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-introduce h3 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-introduce h6 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-introduce h5 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-introduce button {
+    padding: 18px 18px;
+    border-radius: 10px;
+    border-color: #57c9e0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #57c9e0;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.naveen-introduce a {
+    text-decoration: none;
+}
+
+.naveen-introduce span {
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-introduce button:active {
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.naveen-resume-button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
+}
+
+.naveen-introduce button:hover span,
+.naveen-introduce button:active span,
+.naveen-introduce button:focus span {
+    animation-play-state: paused;
+}
+
+.naveen-introduce button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
+}
+
+.naveen-introduce button span:nth-child(1) {
+    height: 3px;
+    width: 200px;
+    top: 0px;
+    left: -200px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1 {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+/* home */
+/* about-page */
+.naveen-about {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 0 0;
+}
+
+.naveen-about h2 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 6500;
+    line-height: normal;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-about h3 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 64px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-about-1 {
+    display: flex;
+    gap: 40px;
+    margin: 0 180px auto;
+}
+
+.naveen-about-1 h4 {
+    font-family: Roboto;
+    color: #697979;
+    /* text-align: left; */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 65px 0;
+    letter-spacing: 0.64px;
+}
+
+.naveen-qualification {
+    padding: 84px 0;
+    display: grid;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.naveen-qualification-1 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.naveen-qualification-1 h2 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-qualification-1 h4 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 65px 0;
+    letter-spacing: 0.64px;
+}
+
+.education-work h3 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 6500;
+    line-height: normal;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.64px;
+}
+
+/* about-page */
+/* resume-poup */
+/* .naveen-resume-button {
+    padding: 18px 18px;
+    border-radius: 10px;
+    border-color: #57c9e0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Roboto;
+    color: #171716bc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-resume-button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+} */
+/* Your CSS file */
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
+.naveen-resume-button {
+    position: relative;
+    padding: 18px 18px;
+    border-radius: 10px;
+    border-color: #57c9e0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Roboto;
+    color: #171716bc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+    overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.5s;
+
+}
+
+.naveen-resume-button span {
+    position: absolute;
+    display: block;
+}
+
+/* .naveen-resume-button:focus  */
+.naveen-resume-button:active {
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.naveen-resume-button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
+}
+
+.naveen-resume-button:hover span,
+.naveen-resume-button:active span,
+.naveen-resume-button:focus span {
+    animation-play-state: paused;
+}
+
+.naveen-resume-button span:nth-child(1) {
+    height: 3px;
+    width: 200px;
+    top: 0px;
+    left: -200px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1 {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+@keyframes span2 {
+    0% {
+        top: -70px;
+    }
+
+    100% {
+        top: 70px;
+    }
+}
+
+/* Add other animation styles similarly for span2, span3, and span4 */
+
+/* ===== */
+.naveen-resume-download {
+    padding: 5px;
+    border-radius: 10px;
+    border-color: #57c9e0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    z-index: 50;
+    top: 716px;
+    right: 9px;
+    font-family: Roboto;
+    color: #697979;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-resume-download:hover {
+    background-color: #57c9e0;
+    color: #fff;
+}
+
+.naveen-resume-close {
+    padding: 5px 5px;
+    border-radius: 10px;
+    border-color: #57c9e0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #57c9e0;
+    position: absolute;
+    z-index: 50;
+    top: 10px;
+    right: 10px;
+}
+
+.naveen-adjust-resume::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7;
+    border-radius: 50px;
+    border: 6px solid #C7C7C7;
+    opacity: 1;
+}
+
+.naveen-adjust-resume::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.naveen-adjust-resume::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.naveen-resume {
+    display: flex;
+}
+
+.ReactModal__Content {
+    position: relative;
+}
+
+.naveen-resume-newadjust {
+    display: flex;
+    gap: 20px;
+}
+
+.naveen-adjust-resume {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    inset: 53px 0px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px 0px 20px 20px;
+    width: fit-content !important;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    position: relative;
+}
+
+.react-pdf__Document.naveentextlayer {
+    --scale-factor: 1;
+    overflow: auto;
+    height: 100%;
+}
+
+.react-pdf__Document.naveentextlayer::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7;
+    border-radius: 50px;
+    border: 7px solid #C7C7C7;
+    opacity: 1;
+}
+
+.react-pdf__Document.naveentextlayer::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.react-pdf__Document.naveentextlayer::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* resume-poup */
+/* skills */
+.naveen-skills {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 58px;
+}
+
+.naveen-skills-1 {
+    border: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    padding: 40px 10px 20px;
+    transition: transform 0.5s, box-shadow 0.5s;
+
+}
+
+.naveen-skills-sub-1 {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.naveen-skills-1:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+}
+
+.naveen-skills-sub-1 h4 {
+    font-family: Poppins;
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 16px 0;
+    letter-spacing: 0.64px;
+    white-space: nowrap;
+}
+
+.skills {
+    padding: 60px 0 0 0;
+    text-align: center;
+}
+
+.skills h3 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.64px;
+}
+
+.skills h4 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 64px 0;
+    letter-spacing: -0.64px;
+}
+
+/* skills */
+/* project */
+.correction-card {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    background-color: transparent;
+    align-items: center !important;
+}
+
+.project-card-1 {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+}
+
+.project-card-2 {
+    padding: 15px;
+}
+
+.project-1 {
+    border: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    /* padding: 40px 10px 20px;  */
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.project-1:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+}
+
+.project-2 h2 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+.project-2 h4 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.64px;
+}
+
+.project-livebutton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-livebutton button {
+    background-color: transparent;
+    border-color: #57c9e0;
+    border-radius: 10px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    padding: 0;
+}
+
+.project-livebutton a {
+    text-decoration: none;
+    display: flex;
+    padding: 5px;
+    color: #0f1010;
+    align-items: center;
+    text-align: center;
+}
+
+.project-livebutton a:hover {
+    background-color: #57c9e0;
+    border-radius: 10px;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+}
+
+.project-livebutton button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+}
+
+/* .project-livebutton button:hover,
+.project-livebutton a:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+} */
+
+/* .livebutton :hover {
+    background-color: #57c9e0;
+    color: #fbfdfe !important;
+}
+.project-livebutton a:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+}
+
+.project-livebutton button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+} */
+.project-card-sub {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.project-card-sub h2 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+.project-card-sub h3 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.64px;
+}
+
+/* project */
+/* contact */
+.naveen-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 48px;
+}
+
+.naveen-contactbroder {
+    border: transparent;
+    border-radius: 15px;
+    background-color: #fffefe;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 2px;
+}
+
+.contact-naveen {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 45px 0;
+}
+
+.contact-naveen h2 {
+    font-family: Roboto;
+    color: #0e0e0bda;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.64px;
+}
+
+.contact-naveen h3 {
+    font-family: Roboto;
+    color: #697979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-contact-1 {
+    border: transparent;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    gap: 25px;
+    background-color: #57c9e0;
+    margin-bottom: 13px;
+}
+
+.naveen-contact-2 h3 {
+    font-family: Roboto;
+    color: rgba(15, 15, 15, 0.725);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0 0 30px 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-contact-1 a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    gap: 8px;
+    margin-bottom: 10px;
+
+}
+
+.naveen-contact-1 h3 {
+    font-family: poppins;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-contact-1 h4 {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 0 0;
+    letter-spacing: -0.64px;
+}
+
+.naveen-form-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.naveen-form {
+    background-color: #eefafc;
+    border: transparent;
+    border-radius: 10px;
+    padding: 12px 16px 4px;
+    display: grid;
+}
+
+.naveen-form label {
+    font-family: Poppins;
+    color: #697979;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.naveen-input {
+    background-color: #eefafc !important;
+    border: transparent;
+    padding: 4px 8px 8px 0;
+    font-family: Poppins;
+    color: #697979 !important;
+    border-color: #eefafc;
+    width: 100%;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    margin-bottom: 16px;
+}
+
+.naveen-input.-internal-autofill-selected {
+    background-color: #fbfdfe !important;
+}
+
+.naveen-input:focus-visible {
+    outline: transparent;
+}
+
+.naveen-form-1 {
+    background-color: #eefafc;
+    border: transparent;
+    border-radius: 5px;
+    padding: 12px 16px 4px;
+    display: grid;
+}
+
+.naveen-form-1 label {
+    font-family: Poppins;
+    color: #697979;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.naveen-form-2 {
+    background-color: #eefafc;
+    border: transparent;
+    border-radius: 5px;
+    padding: 12px 16px 4px;
+    display: grid;
+}
+
+.naveen-form-2 label {
+    font-family: Poppins;
+    color: #697979;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.naveen-contact-sub {
+    display: grid;
+    gap: 25px;
+}
+
+.naveen-allform h5 {
+    font-family: Poppins;
+    color: #697979;
+    border-color: #eefafc;
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    margin-bottom: 16px;
+}
+
+.naveen-allform button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    background-color: #eefafc;
+    border: transparent;
+    border-radius: 10px;
+    padding: 16px;
+    color: #697979;
+    border-color: #eefafc;
+    margin: 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.naveen-allform button:hover {
+    background-color: #57c9e0;
+    color: #fbfdfe;
+    transform: rotate(-3deg) scale(1.1) rotate(3deg);
+}
+
+.naveen-contact-2 {
+    padding: 0 0 55px 0;
+}
+
+.naveen-download-form {
+    display: flex;
+    gap: 20px;
+}
+
+/* .naveen-resume-button-2{
+
+} */
+.contact-background {
+    background: linear-gradient(#ffffff 0%, #ffffff 50%, #dbffff 60%, #57c9e0 90%);
+    height: 100%;
+}
+
+/* contact */
+/* footer */
+.footer-naveen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    /* width: 100%; */
+    text-align: center;
+    background-color: #57c9e0;
+    padding: 15px;
+}
+
+.footer-naveen-1 h2 {
+    font-family: Poppins;
+    color: #eefafc;
+    height: 100%;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+
+
+
+/* footer */
+/* animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-text {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-text {
+    animation: slideIn 2s ease-out;
+  }
+  
+  /* Zoom-in animation */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+  
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .zoom-in-text {
+    animation: zoomIn 2s ease-in;
+  }
+  
+  /* Fade-in animation for image */
+  .fade-in-image {
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+/* animation */
